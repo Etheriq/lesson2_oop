@@ -17,3 +17,6 @@ $pc2 = new pc("44003010056955", "Core2Duo E2140 2.13 Ghz", "160 Gb", "2 Gb");
 
 $pc1->showFullInfo();
 $pc2->sendToService();
+
+$printer1 = new printer("44003010025541", "HP 1320", "Laser printer", "Q5949A");
+$printer1->showFullInfo();
