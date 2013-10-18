@@ -66,7 +66,7 @@ class printer extends inventory implements inventoryInterface
 
     public function sendToService()
     {
-        echo "Printer with inventory number ".$this->getInventNumber()." sent to service organization";
+        echo "Printer with inventory number ".$this->getInventNumber()." sent to service organization\n";
     }
 
     public function showFullInfo()

@@ -66,7 +66,7 @@ class monitor extends inventory implements inventoryInterface
 
     public function sendToService()
     {
-        echo "Monitor with inventory number ".$this->getInventNumber()." and model ".$this->getModel()." sent to service organization";
+        echo "Monitor with inventory number ".$this->getInventNumber()." and model ".$this->getModel()." sent to service organization\n";
     }
 
     public function showFullInfo()

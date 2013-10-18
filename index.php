@@ -10,6 +10,8 @@
 require_once "classes/class.monitor.php";
 require_once "classes/class.pc.php";
 require_once "classes/class.inventory.php";
+require_once "classes/class.printer.php";
+
 
 
 $pc1 = new pc("44003010012356","Pentium 4 3 Ghz", "320 Gb", "2 Gb");

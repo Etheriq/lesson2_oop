@@ -57,7 +57,7 @@ class pc extends inventory implements inventoryInterface
 
     public function sendToService()
     {
-        echo "PC with inventory number ".$this->getInventNumber()." sent to service organization";
+        echo "PC with inventory number ".$this->getInventNumber()." sent to service organization\n";
     }
 
     public function showFullInfo()
