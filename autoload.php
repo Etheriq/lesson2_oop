@@ -1,7 +1,8 @@
 <?php
 /**
  * Created by JetBrains PhpStorm.
- * User: xeon
+ * File: autoload.php
+ * User: Yuriy Tarnavskiy
  * Date: 20.10.13
  * Time: 0:36
  * To change this template use File | Settings | File Templates.
