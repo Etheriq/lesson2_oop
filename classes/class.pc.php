@@ -66,7 +66,7 @@ class pc extends inventory implements inventoryInterface
         Inventory number: ".$this->getInventNumber().";<br/>
         Type of main processor: ".$this->getCpu().";<br/>
         Volume of HDD: ".$this->getHdd().";<br/>
-        Volume of RAM: ".$this->getRam()."<br/>;
+        Volume of RAM: ".$this->getRam().";<br/>
         ";
     }
 }
