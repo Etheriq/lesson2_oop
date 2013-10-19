@@ -7,8 +7,8 @@
  * Time: 11:48
  */
 
-require_once "class.inventory.php";
-require_once "interface.inventoryInterface.php";
+//require_once "class.inventory.php";
+//require_once "interface.inventoryInterface.php";
 
 class pc extends inventory implements inventoryInterface
 {

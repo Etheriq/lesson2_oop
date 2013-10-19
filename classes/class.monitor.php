@@ -7,8 +7,8 @@
  * Time: 11:03
  */
 
-require_once "class.inventory.php";
-require_once "interface.inventoryInterface.php";
+//require_once "class.inventory.php";
+//require_once "interface.inventoryInterface.php";
 
 class monitor extends inventory implements inventoryInterface
 {
@@ -16,7 +16,7 @@ class monitor extends inventory implements inventoryInterface
     private $type;
     private $interf;
 
-    function __construct($model, $type, $interf, $inv_numb)
+    function __construct($inv_numb, $model, $type, $interf)
     {
         $this->inv_number = $inv_numb;
         $this->model = $model;

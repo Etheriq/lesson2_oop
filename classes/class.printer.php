@@ -6,8 +6,9 @@
  * Date: 18.10.13
  * Time: 14:00
  */
-require_once "class.inventory.php";
-require_once "interface.inventoryInterface.php";
+
+//require_once "class.inventory.php";
+//require_once "interface.inventoryInterface.php";
 
 class printer extends inventory implements inventoryInterface
 {
