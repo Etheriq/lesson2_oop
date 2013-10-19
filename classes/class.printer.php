@@ -1,27 +1,27 @@
 <?php
 /**
  * Created by JetBrains PhpStorm.
- * File: class.monitor.php
+ * File: class.printer.php
  * User: Yuriy Tarnavskiy
  * Date: 18.10.13
- * Time: 11:03
+ * Time: 14:00
  */
 
 //require_once "class.inventory.php";
 //require_once "interface.inventoryInterface.php";
 
-class monitor extends inventory implements inventoryInterface
+class printer extends inventory implements inventoryInterface
 {
     private $model;
     private $type;
-    private $interf;
+    private $cartridge;
 
-    function __construct($inv_numb, $model, $type, $interf)
+    public function __construct($inv, $model, $type, $cartridge)
     {
-        $this->inv_number = $inv_numb;
+        $this->inv_number = $inv;
         $this->model = $model;
         $this->type = $type;
-        $this->interf = $interf;
+        $this->cartridge = $cartridge;
     }
 
     public function getInventNumber()
@@ -39,9 +39,9 @@ class monitor extends inventory implements inventoryInterface
         return $this->type;
     }
 
-    public function getInterf()
+    public function getCartridge()
     {
-        return $this->interf;
+        return $this->cartridge;
     }
 
     public function setInventNumber($newInv)
@@ -59,24 +59,23 @@ class monitor extends inventory implements inventoryInterface
         $this->type = $newType;
     }
 
-    public function setInterf($newInterf)
+    public function setCartridge($newCartridge)
     {
-        $this->interf = $newInterf;
+        $this->cartridge = $newCartridge;
     }
+
 
     public function sendToService()
     {
-        echo "Monitor with inventory number ".$this->getInventNumber()." and model ".$this->getModel()." sent to service organization\n";
+        echo "Printer with inventory number ".$this->getInventNumber()." sent to service organization\n";
     }
 
     public function showFullInfo()
     {
-        echo "Full information about ".$this->getModel()." monitor:<br/>
+        echo "Full information about Printer model: ".$this->getModel()."<br/>
         Inventory number: ".$this->getInventNumber().";<br/>
-        Type of monitor: ".$this->getType().";<br/>
-        Interface of monitor: ".$this->getInterf().";<br/>
+        Type of printer: ".$this->getType().";<br/>
+        Model of cartridge for current printer: ".$this->getCartridge().";<br/>
         ";
     }
-
-
 }

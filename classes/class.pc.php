@@ -7,8 +7,8 @@
  * Time: 11:48
  */
 
-require_once "class.inventory.php";
-require_once "interface.inventoryInterface.php";
+//require_once "class.inventory.php";
+//require_once "interface.inventoryInterface.php";
 
 class pc extends inventory implements inventoryInterface
 {
@@ -44,16 +44,6 @@ class pc extends inventory implements inventoryInterface
         return $this->ram;
     }
 
-    public function setInventNumber($newInv)
-    {
-        $this->inv_number = $newInv;
-    }
-
-    public function setCpu($newCpu)
-    {
-        $this->cpu = $newCpu;
-    }
-
     public function setHdd($newHdd)
     {
         $this->hdd = $newHdd;
@@ -67,7 +57,7 @@ class pc extends inventory implements inventoryInterface
 
     public function sendToService()
     {
-        echo "PC with inventory number ".$this->getInventNumber()." sent to service organization";
+        echo "PC with inventory number ".$this->getInventNumber()." sent to service organization\n";
     }
 
     public function showFullInfo()
@@ -76,7 +66,7 @@ class pc extends inventory implements inventoryInterface
         Inventory number: ".$this->getInventNumber().";<br/>
         Type of main processor: ".$this->getCpu().";<br/>
         Volume of HDD: ".$this->getHdd().";<br/>
-        Volume of RAM: ".$this->getRam().";
+        Volume of RAM: ".$this->getRam().";<br/>
         ";
     }
 }
