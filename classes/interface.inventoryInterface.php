@@ -7,7 +7,7 @@
  * Time: 11:26
  */
 
-interface inventoryInterface
+interface InventoryInterface
 {
     public function sendToService();
     public function showFullInfo();

@@ -10,7 +10,7 @@
 //require_once "class.inventory.php";
 //require_once "interface.inventoryInterface.php";
 
-class monitor extends inventory implements inventoryInterface
+class Monitor extends Inventory implements InventoryInterface
 {
     private $model;
     private $type;
@@ -66,17 +66,14 @@ class monitor extends inventory implements inventoryInterface
 
     public function sendToService()
     {
-        echo "Monitor with inventory number ".$this->getInventNumber()." and model ".$this->getModel()." sent to service organization\n";
+        echo "Monitor with inventory number ".$this->getInventNumber()." and model ".$this->getModel()." sent to service organization.\n";
     }
 
     public function showFullInfo()
     {
         echo "Full information about ".$this->getModel()." monitor:<br/>
-        Inventory number: ".$this->getInventNumber().";<br/>
-        Type of monitor: ".$this->getType().";<br/>
-        Interface of monitor: ".$this->getInterf().";<br/>
-        ";
+            Inventory number: ".$this->getInventNumber().";<br/>
+            Type of monitor: ".$this->getType().";<br/>
+            Interface of monitor: ".$this->getInterf().";<br/>";
     }
-
-
 }

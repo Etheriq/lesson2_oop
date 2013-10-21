@@ -7,7 +7,7 @@
  * Time: 11:01
  */
 
-abstract class inventory
+abstract class Inventory
 {
     protected $inv_number;
 }

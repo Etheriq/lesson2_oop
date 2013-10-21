@@ -14,11 +14,9 @@ require_once "classes/class.inventory.php";
 require_once "classes/class.printer.php";
 */
 
-
 include "autoload.php";
 
-
-$pc1 = new pc("44003010012356","Pentium 4 3 Ghz", "320 Gb", "2 Gb");
+$pc1 = new pc("44003010012356", "Pentium 4 3 Ghz", "320 Gb", "2 Gb");
 $pc2 = new pc("44003010056955", "Core2Duo E2140 2.13 Ghz", "160 Gb", "2 Gb");
 
 $pc1->showFullInfo();

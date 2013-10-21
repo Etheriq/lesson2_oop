@@ -10,7 +10,7 @@
 //require_once "class.inventory.php";
 //require_once "interface.inventoryInterface.php";
 
-class printer extends inventory implements inventoryInterface
+class Printer extends Inventory implements InventoryInterface
 {
     private $model;
     private $type;
@@ -73,9 +73,8 @@ class printer extends inventory implements inventoryInterface
     public function showFullInfo()
     {
         echo "Full information about Printer model: ".$this->getModel()."<br/>
-        Inventory number: ".$this->getInventNumber().";<br/>
-        Type of printer: ".$this->getType().";<br/>
-        Model of cartridge for current printer: ".$this->getCartridge().";<br/>
-        ";
+            Inventory number: ".$this->getInventNumber().";<br/>
+            Type of printer: ".$this->getType().";<br/>
+            Model of cartridge for current printer: ".$this->getCartridge().";<br/>";
     }
 }

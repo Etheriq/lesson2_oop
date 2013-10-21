@@ -10,7 +10,7 @@
 //require_once "class.inventory.php";
 //require_once "interface.inventoryInterface.php";
 
-class pc extends inventory implements inventoryInterface
+class Pc extends Inventory implements InventoryInterface
 {
     private $cpu;
     private $hdd;
@@ -63,10 +63,9 @@ class pc extends inventory implements inventoryInterface
     public function showFullInfo()
     {
         echo "Full information about PC:<br/>
-        Inventory number: ".$this->getInventNumber().";<br/>
-        Type of main processor: ".$this->getCpu().";<br/>
-        Volume of HDD: ".$this->getHdd().";<br/>
-        Volume of RAM: ".$this->getRam().";<br/>
-        ";
+            Inventory number: ".$this->getInventNumber().";<br/>
+            Type of main processor: ".$this->getCpu().";<br/>
+            Volume of HDD: ".$this->getHdd().";<br/>
+            Volume of RAM: ".$this->getRam().";<br/>";
     }
 }
