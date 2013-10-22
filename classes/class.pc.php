@@ -7,22 +7,14 @@
  * Time: 11:48
  */
 
-//require_once "class.inventory.php";
+//require_once "class.AbstractInventory.php";
 //require_once "interface.inventoryInterface.php";
 
-class Pc extends Inventory implements InventoryInterface
+class Pc extends AbstractInventory implements InventoryInterface
 {
     private $cpu;
     private $hdd;
     private $ram;
-
-    public function __construct($inv, $cpu, $hdd, $ram)
-    {
-        $this->inv_number = $inv;
-        $this->cpu = $cpu;
-        $this->hdd = $hdd;
-        $this->ram = $ram;
-    }
 
     public function getInventNumber()
     {
@@ -44,6 +36,16 @@ class Pc extends Inventory implements InventoryInterface
         return $this->ram;
     }
 
+    public function setInventoryNumber($newInventNumber)
+    {
+        $this->inv_number = $newInventNumber;
+    }
+
+    public function setCpu($newCpu)
+    {
+        $this->cpu = $newCpu;
+    }
+
     public function setHdd($newHdd)
     {
         $this->hdd = $newHdd;
@@ -57,15 +59,17 @@ class Pc extends Inventory implements InventoryInterface
 
     public function sendToService()
     {
-        echo "PC with inventory number ".$this->getInventNumber()." sent to service organization\n";
+        $result = "PC with inventory number ".$this->getInventNumber()." sent to service organization\n";
+        return $result;
     }
 
     public function showFullInfo()
     {
-        echo "Full information about PC:<br/>
-            Inventory number: ".$this->getInventNumber().";<br/>
-            Type of main processor: ".$this->getCpu().";<br/>
-            Volume of HDD: ".$this->getHdd().";<br/>
-            Volume of RAM: ".$this->getRam().";<br/>";
+        $result = "Full information about PC: \n
+            Inventory number: ".$this->getInventNumber()." \n
+            Type of main processor: ".$this->getCpu()."; \n
+            Volume of HDD: ".$this->getHdd()."; \n
+            Volume of RAM: ".$this->getRam()."; \n ";
+        return $result;
     }
 }
