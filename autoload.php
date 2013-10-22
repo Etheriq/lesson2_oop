@@ -10,13 +10,10 @@
 
 function autoload($className)
 {
-    $check = stripos($className,"interface");  //проверка интерфейс или класс
-    if($check === false) // если в имени подключаемого класса есть сл Interface - генерим соответствующий путь
-    {
+   $checkClassName = stripos($className,"interface");
+    if ($checkClassName === false) {
         $fileName = "classes/class.".$className.".php";
-    }
-    else
-    {
+    } else {
         $fileName = "classes/interface.".$className.".php";
     }
 

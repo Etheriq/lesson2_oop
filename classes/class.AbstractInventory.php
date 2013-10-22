@@ -1,13 +1,15 @@
 <?php
 /**
  * Created by JetBrains PhpStorm.
- * File: class.inventory.php
+ * File: class.AbstractInventory.php
  * User: Yuriy Tarnavskiy
  * Date: 18.10.13
  * Time: 11:01
  */
 
-abstract class inventory
+abstract class AbstractInventory
 {
     protected $inv_number;
+
+    abstract public function setInventoryNumber($newInvNumber);
 }

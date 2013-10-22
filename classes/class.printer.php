@@ -7,22 +7,14 @@
  * Time: 14:00
  */
 
-//require_once "class.inventory.php";
+//require_once "class.AbstractInventory.php";
 //require_once "interface.inventoryInterface.php";
 
-class printer extends inventory implements inventoryInterface
+class Printer extends AbstractInventory implements InventoryInterface
 {
     private $model;
     private $type;
     private $cartridge;
-
-    public function __construct($inv, $model, $type, $cartridge)
-    {
-        $this->inv_number = $inv;
-        $this->model = $model;
-        $this->type = $type;
-        $this->cartridge = $cartridge;
-    }
 
     public function getInventNumber()
     {
@@ -44,9 +36,9 @@ class printer extends inventory implements inventoryInterface
         return $this->cartridge;
     }
 
-    public function setInventNumber($newInv)
+    public function setInventoryNumber($newInventNumber)
     {
-        $this->inv_number = $newInv;
+        $this->inv_number = $newInventNumber;
     }
 
     public function setModel($newModel)
@@ -64,18 +56,18 @@ class printer extends inventory implements inventoryInterface
         $this->cartridge = $newCartridge;
     }
 
-
     public function sendToService()
     {
-        echo "Printer with inventory number ".$this->getInventNumber()." sent to service organization\n";
+        $result = "Printer with inventory number ".$this->getInventNumber()." sent to service organization\n";
+        return $result;
     }
 
     public function showFullInfo()
     {
-        echo "Full information about Printer model: ".$this->getModel()."<br/>
-        Inventory number: ".$this->getInventNumber().";<br/>
-        Type of printer: ".$this->getType().";<br/>
-        Model of cartridge for current printer: ".$this->getCartridge().";<br/>
-        ";
+        $result = "Full information about Printer model: ".$this->getModel()." \n
+            Inventory number: ".$this->getInventNumber().";\n
+            Type of printer: ".$this->getType().";\n
+            Model of cartridge for current printer: ".$this->getCartridge().";\n";
+        return $result;
     }
 }
