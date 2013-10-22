@@ -15,7 +15,7 @@ require_once "classes/class.printer.php";
 */
 
 include "autoload.php";
-
+ 
 $pc1 = new Pc();
 $pc1->setInventoryNumber("44003010012356");
 $pc1->setCpu("Pentium 4 3 Ghz");
