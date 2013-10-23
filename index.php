@@ -7,12 +7,9 @@
  * Time: 12:06
  */
 
-/**
-require_once "classes/class.monitor.php";
-require_once "classes/class.pc.php";
-require_once "classes/class.AbstractInventory.php";
-require_once "classes/class.printer.php";
-*/
+use cls\Pc as Pc;
+use cls\Printer;
+use cls\Monitor;
 
 include "autoload.php";
 

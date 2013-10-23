@@ -10,6 +10,8 @@
 //require_once "class.AbstractInventory.php";
 //require_once "interface.inventoryInterface.php";
 
+namespace cls;
+
 class Monitor extends AbstractInventory implements InventoryInterface
 {
     private $model;

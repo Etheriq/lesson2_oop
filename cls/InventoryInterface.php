@@ -7,6 +7,8 @@
  * Time: 11:26
  */
 
+namespace cls;
+
 interface InventoryInterface
 {
     public function sendToService();

@@ -7,6 +7,8 @@
  * Time: 11:01
  */
 
+namespace cls;
+
 abstract class AbstractInventory
 {
     protected $inv_number;
